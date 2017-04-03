@@ -14,11 +14,11 @@ import test.victoryaxon.org.test.R;
 /**
  * Created by Mitch on 2016-05-06.
  */
-public class ThreeColumn_ListAdapter_Football extends ArrayAdapter<Football> {
+public class Column_ListAdapter_Football extends ArrayAdapter<Football> {
     private LayoutInflater mInflater;
     private ArrayList<Football> fbs;
     private int mViewResourceId;
-    public ThreeColumn_ListAdapter_Football(Context context, int textViewResourceId, ArrayList<Football> fbs) {
+    public Column_ListAdapter_Football(Context context, int textViewResourceId, ArrayList<Football> fbs) {
         super(context, textViewResourceId, fbs);
         this.fbs = fbs;
         mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

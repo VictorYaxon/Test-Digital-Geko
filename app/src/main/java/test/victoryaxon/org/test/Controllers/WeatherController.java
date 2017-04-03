@@ -1,6 +1,5 @@
 package test.victoryaxon.org.test.Controllers;
 
-import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -19,7 +18,7 @@ import java.util.Scanner;
 
 import test.victoryaxon.org.test.Models.Weather;
 import test.victoryaxon.org.test.R;
-import test.victoryaxon.org.test.ListAdapter.ThreeColumn_ListAdapter_Weather;
+import test.victoryaxon.org.test.ListAdapter.Column_ListAdapter_Weather;
 
 /**
  * Created by User on 01/04/2017.
@@ -78,7 +77,7 @@ public void weatherLeer(){
         System.out.println("Error de lectura del fichero");
         e.printStackTrace();
     }
-        ThreeColumn_ListAdapter_Weather adapter = new ThreeColumn_ListAdapter_Weather(this,R.layout.list_adapter_view_weathers,weather);
+        Column_ListAdapter_Weather adapter = new Column_ListAdapter_Weather(this,R.layout.list_adapter_view_weathers,weather);
         listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(adapter);
     }
@@ -103,7 +102,7 @@ public void weatherLeer(){
                 maxKey = entry.getKey();
             }
         }
-        Toast.makeText(this,"Temperatura Minima es " + maxKey +")" + " " + maxValue, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Temperatura Minima es " + maxKey +")" + " con " + maxValue +" Grados", Toast.LENGTH_SHORT).show();
     }
 
 }

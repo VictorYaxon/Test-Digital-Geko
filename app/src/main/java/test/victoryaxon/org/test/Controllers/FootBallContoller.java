@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-import test.victoryaxon.org.test.ListAdapter.ThreeColumn_ListAdapter_Football;
+import test.victoryaxon.org.test.ListAdapter.Column_ListAdapter_Football;
 import test.victoryaxon.org.test.Models.Football;
 import test.victoryaxon.org.test.R;
 /**
@@ -77,7 +77,7 @@ public class FootBallContoller extends AppCompatActivity {
             }catch(Exception e){
             e.printStackTrace();
         }
-        ThreeColumn_ListAdapter_Football adapter = new ThreeColumn_ListAdapter_Football(this,R.layout.list_adapter_view_football,football);
+        Column_ListAdapter_Football adapter = new Column_ListAdapter_Football(this,R.layout.list_adapter_view_football,football);
         listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(adapter);
     }

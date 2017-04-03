@@ -14,11 +14,11 @@ import test.victoryaxon.org.test.Models.Weather;
 /**
  * Created by Mitch on 2016-05-06.
  */
-public class ThreeColumn_ListAdapter_Weather extends ArrayAdapter<Weather> {
+public class Column_ListAdapter_Weather extends ArrayAdapter<Weather> {
     private LayoutInflater mInflater;
     private ArrayList<Weather> users;
     private int mViewResourceId;
-    public ThreeColumn_ListAdapter_Weather(Context context, int textViewResourceId, ArrayList<Weather> users) {
+    public Column_ListAdapter_Weather(Context context, int textViewResourceId, ArrayList<Weather> users) {
         super(context, textViewResourceId, users);
         this.users = users;
         mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
