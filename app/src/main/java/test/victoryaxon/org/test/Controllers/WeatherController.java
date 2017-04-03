@@ -1,7 +1,10 @@
 package test.victoryaxon.org.test.Controllers;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -22,7 +25,7 @@ import test.victoryaxon.org.test.ListAdapter.ThreeColumn_ListAdapter_Weather;
  * Created by User on 01/04/2017.
  */
 
-public class WeatherController extends Activity {
+public class WeatherController extends AppCompatActivity {
     Hashtable<Integer,Double> temperaturasMinimas = new Hashtable<Integer,Double>();
 public void weatherLeer(){
     ListView Lista;
@@ -84,6 +87,11 @@ public void weatherLeer(){
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.viewcontents_layout_weathers);
+        setTitle("Weather");
+        Toolbar topToolBar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(topToolBar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        topToolBar.setTitleTextColor(Color.WHITE);
         weatherLeer();
     }
     public void btnMaxValue(View v) {
@@ -97,4 +105,5 @@ public void weatherLeer(){
         }
         Toast.makeText(this,"Temperatura Minima es " + maxKey +")" + " " + maxValue, Toast.LENGTH_SHORT).show();
     }
+
 }

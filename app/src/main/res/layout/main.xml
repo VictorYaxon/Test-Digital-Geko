@@ -1,34 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layoutMainContainer"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/color_primary"
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+    </android.support.v7.widget.Toolbar>
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="btnWeather"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/imageButton7"
+        android:layout_marginEnd="61dp"
+        android:background="@color/secondary_text_color"
+        app:srcCompat="@mipmap/premier" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="btnFootBall"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/layoutButtons">
+        android:layout_marginEnd="24dp"
+        android:layout_toStartOf="@+id/imageButton6"
+        android:background="@color/secondary_text_color"
+        android:backgroundTint="@color/primary_light"
+        app:srcCompat="@mipmap/clima" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Weather"
-            android:onClick="btnWeather"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Football"
-            android:onClick="btnFootBall"/>
-    </LinearLayout>
-    <ProgressBar
-        style="?android:attr/progressBarStyleLarge"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/progressBar"
-        android:layout_below="@+id/layoutButtons"
-        android:layout_centerInParent="true"
-        android:visibility="gone" />
+        android:layout_above="@+id/imageButton7"
+        android:layout_alignEnd="@+id/imageButton7"
+        android:layout_marginBottom="31dp"
+        android:layout_marginEnd="19dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Weathers"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_marginStart="18dp"
+        android:layout_toEndOf="@+id/imageButton7"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Football"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+
 </RelativeLayout>

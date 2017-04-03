@@ -1,13 +1,14 @@
 package test.victoryaxon.org.test.Controllers;
 
-import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -19,14 +20,11 @@ import java.util.Scanner;
 import test.victoryaxon.org.test.ListAdapter.ThreeColumn_ListAdapter_Football;
 import test.victoryaxon.org.test.Models.Football;
 import test.victoryaxon.org.test.R;
-
-import static test.victoryaxon.org.test.R.id.listView;
-
 /**
  * Created by User on 02/04/2017.
  */
 
-public class FootBallContoller extends Activity{
+public class FootBallContoller extends AppCompatActivity {
     Hashtable<String,Double> goles_diferencia = new Hashtable<String,Double>();
     private void footBallLeer() {
         String equipo;
@@ -87,6 +85,11 @@ public class FootBallContoller extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.viewcontents_layout_football);
+        setTitle("Football");
+        Toolbar topToolBar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(topToolBar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        topToolBar.setTitleTextColor(Color.WHITE);
         footBallLeer();
     }
 
