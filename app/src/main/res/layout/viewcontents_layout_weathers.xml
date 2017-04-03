@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutMainContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_weight="25"
+        android:text="No."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:text="No." />
+
+    <TextView
+        android:id="@+id/txtMaximo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_toEndOf="@+id/txtNo"
+        android:layout_weight="25"
+        android:text="Maximo"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:text="Maximo" />
+
+    <TextView
+        android:id="@+id/txtMinimo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="25"
+        android:text="Minimo"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:text="Minimo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/txtTotals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="25"
+        android:text="Diferencia"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:text="Diferencia"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/txtMinimo"
+        android:layout_marginStart="27dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutButtons"
+        android:layout_below="@+id/txtNo"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="39dp">
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="393dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:onClick="btnMaxValue"
+        android:text="Quien tiene menor diferencia de temperatura?"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
